@@ -3,7 +3,7 @@
 
 Python library and design files for a modular greenhouse system based on the RaspberryPi.
 
-It is powered by a 12V/2A power supply an it backpowers the raspberry pi so everything can be run from a single supply.
+It is powered by a 12V power supply an it backpowers the raspberry pi so everything can be run from a single supply.
 The 12V can be used to power up to 5 additional 12V inductive loads, like water pumps or magnetic valves that can be controlled over 
 the GPIO Pins of the Pi.
 
@@ -16,8 +16,9 @@ Connect a 3 Wire temperature/humidity sensor and up to 4 I2C sensors to monitor 
 You can find the schematic design file in the "hardware" section of this repo.
 
 ## Maximum Ratings
-The HAT is designed to work with a single power supply, that backpowers the raspberry pi.
-The power ratings for the supply are: 12V/2A 
+The HAT is designed to work with a single power supply, that backpowers the raspberry pi with 5V/2A.
+
+Input Voltage: 12V 
 
 # Coming Soon - PlantHAT Web-APP
 
