@@ -1,7 +1,11 @@
 # PlantHAT
 ![PlantHAT](https://raw.githubusercontent.com/mrgnomes/readme_images/master/plantHAT_Readme.png)
 
-Python library and design files for a modular greenhouse system based on the RaspberryPi
+Python library and design files for a modular greenhouse system based on the RaspberryPi.
+
+It is powered by a 12V/2A power supply an it backpowers the raspberry pi so everything can be run from a single supply.
+The 12V can be used to power up to 5 additional 12V inductive loads, like water pumps or magnetic valves that can be controlled over 
+the GPIO Pins of the Pi.
 
 # Sensors
 
