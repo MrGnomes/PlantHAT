@@ -20,12 +20,27 @@ The HAT is designed to work with a single power supply, that backpowers the rasp
 
 Input Voltage: 12V 
 
-# Coming Soon - PlantHAT Web-APP
+# Python3 Web-APP (Flask)
 
-I am working on a python web app based on flask to monitor the plants and provide a admin panel to control water pumps and different inductive loads needed for a garden/greenhouse.
-Here is a screenshot of the current app:
+The App was written using the current Python Tool for Visual Studio included in the community edition of Visual Studio 2017 and as a extension for Visual Studio 2015.
+If you have the GitHub extension for Visual Studio and the python tools installed you can clone the git and start right away by using the solution file.
+
+By using the Visual Studio as the IDE, the flask based WebApp can be compiled and debugged on the windows development PC.
+When the code is working, the app can be run inside the Pi and by using the PTVSD package one can remotely debug the flask app directly from the VS-IDE by attaching to the running process using the IP-Address of the Pi.
+Python 3.4 (32-bit) was used, because this was the current python version supported by the Pi, when I started the project.
+
+If you are using linux, just clone the repo, install the required packages and run the app by typing:
+>> python3 run.py
+
+inside the app folder.
+
+(requirements.txt file is coming soon)
 
 ![Dashboard](https://raw.githubusercontent.com/mrgnomes/readme_images/master/plantHAT_dashboard.png)
+
+# Coming Soon - Sensor data charts and GPIO control
+
+
 
 
  
