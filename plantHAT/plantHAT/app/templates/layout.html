@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>
+        {% block page_title %} PlantHAT {% endblock %}
+    </title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}"/>
+    <meta name="keywords" content="plants, plantbox, controlled growth,raspberrypi,python,flask"/>
+    <meta name="author" content="Patrick Laza"/>
+	<link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }} type="image/x-icon">
+	
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+
+
+    {% block css %}{% endblock %}
+
+</head>
+
+<body>
+
+    {% block content %}{% endblock %}
+<!-- /#wrapper -->
+
+    <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
+    {% block scripts %}{% endblock %}
+
+    <div id="footer">
+        {% block footer %}
+        <div class="container text-center">
+            <p>Copyright &copy; Patrick Laza 2017</p>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

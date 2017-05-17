@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>
+        {% block page_title %} PlantHAT - Dashboard {% endblock %}
+    </title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}"/>
+    <meta name="keywords" content="plants, plantbox, controlled growth,raspberrypi,python,flask"/>
+    <meta name="author" content="Patrick Laza"/>
+	<link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }} type="image/x-icon">
+
+	
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+	
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkbox3.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flat-admin-green.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='libs/flaticons/flaticon.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flat_admin_style.css') }}">
+
+	
+    {% block css %}{% endblock %}
+
+</head>
+
+<!-- Set color theme in body class -->
+<body class="flat-green">
+    
+    <div id="app_container"  class="app-container" style="display:none;">
+		<div class="row content-container">
+			<!-- Navigation -->
+			{% with form=form %}
+				{% include "nav.html" %}
+			{% endwith %}
+
+			{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+					<div class="container">
+						{% for message in messages %}
+						 <div class="alert alert-warning">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							{{ message }}
+						</div>
+						{% endfor %}
+					</div>
+				  {% endif %}
+			{% endwith %}
+
+			{% block content %}{% endblock %}
+	   </div>
+    </div>
+
+<!-- /#wrapper -->
+<script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highcharts/4.1.9/highcharts.js"></script>
+<script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/metisMenu/2.2.0/metisMenu.min.js"></script>
+<script type="application/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script src="{{url_for('static', filename='js/select2.full.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/app.js')}}"></script>
+
+<script type="text/javascript" language="javascript">
+
+    $(window).on('load', function () {
+        if ($(window).width() > 1000) {
+            document.getElementById("app_container").classList.add('expanded');
+            document.getElementById('app_container').style.display = 'block';
+        } else {
+            document.getElementById("app_container").classList.remove('expanded');
+            document.getElementById('app_container').style.display = 'block';
+        }
+    });
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 1000) {
+            document.getElementById("app_container").classList.add('expanded');
+        } else {
+            document.getElementById("app_container").classList.remove('expanded');
+        }
+    });
+</script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

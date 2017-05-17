@@ -1,0 +1,98 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-expand-toggle">
+                <i class="fa fa-bars icon"></i>
+            </button>
+            <ol class="breadcrumb navbar-breadcrumb">
+                <li class="active">Dashboard</li>
+            </ol>
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                <i class="fa fa-th icon"></i>
+            </button>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                <i class="fa fa-times icon"></i>
+            </button>
+            <li class="dropdown profile">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ username }} <span class="caret"></span></a>
+                <ul class="dropdown-menu animated fadeInDown">
+                    <li class="profile-img">
+                        <img src="{{ profileImage }}" class="profile-img">
+                    </li>
+                    <li>
+                        <div class="profile-info">
+                            <h4 class="username">{{ username }}</h4>
+                            <div class="btn-group margin-bottom-2x" role="group">
+                                <button type="button" class="btn btn-default" disabled><i class="fa fa-user"></i> TODO:Profile</button>
+                                <a href="{{ url_for('auth.logout') }}" class="btn btn-default"><i class="fa  fa-sign-out"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="side-menu sidebar-inverse">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="side-menu-container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('dashboard.index') }}">
+                    <div class="icon flaticon-plant30"></div>
+                    <div class="title">PlantHAT</div>
+                </a>
+                <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                    <i class="fa fa-times icon"></i>
+                </button>
+            </div>
+
+            <!-- Actual navigation sidebar -->
+            <ul id="side_menu" class="nav navbar-nav" >
+                
+                <!-- Dashboard index -->
+                <li id="dashboard_index_nav" >
+                    <a href="{{ url_for('dashboard.index') }}">
+                        <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Charts -->
+
+                <li class="panel panel-default dropdown">
+                    <a data-toggle="collapse" href="#charts_nav">
+                        <span class="icon fa fa-table"></span><span class="title">Charts</span>
+                    </a>
+                    <!-- Dropdown level 1 -->
+                    <div id="charts_nav" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li id="daily_data_link">   <a href="{{ url_for('dashboard.daily') }}">Daily</a>   </li>
+                                <li id="monthly_data_link"> <a href="{{ url_for('dashboard.monthly') }}">Monthly</a> </li>
+                                <li id="yearly_data_link">  <a href="{{ url_for('dashboard.yearly') }}">Yearly</a>  </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Strategies -->
+                <li class="panel panel-default dropdown">
+                    <a data-toggle="collapse" href="#strategies_nav">
+                        <span class="icon flaticon-watering2"></span><span class="title">Control Panel</span>
+                    </a>
+                    <!-- Dropdown level 1 -->
+                    <div id="strategies_nav" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li id="strategies_link"><a href="{{ url_for('dashboard.strategies') }}">Strategies</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>

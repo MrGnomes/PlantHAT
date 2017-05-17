@@ -1,0 +1,29 @@
+{% extends "dashboard_base.html" %}
+{% block page_title %}Dashboard - Yearly{% endblock %}
+{% block meta_description %} PlantHAT - A RaspberryPi based hydroponic smart greenhouse{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="side-body padding-top">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Yearly overview</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#charts_nav').addClass('collapse in');
+
+        $('#side_menu').find('a').each(function (i)
+        {
+            $(this).removeClass('active');
+        });
+
+        $('#yearly_data_link').addClass("active");
+</script>
+{% endblock %}

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9beeeaea-61ee-44cc-8ca8-9d356df10835</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>plantHAT.py</StartupFile>
+    <StartupFile>run.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,94 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="plantHAT.py" />
+    <Compile Include="app\auth\forms.py" />
+    <Compile Include="app\auth\views.py" />
+    <Compile Include="app\auth\__init__.py" />
+    <Compile Include="app\dashboard\views.py" />
+    <Compile Include="app\dashboard\__init__.py" />
+    <Compile Include="app\errors\views.py" />
+    <Compile Include="app\errors\__init__.py" />
+    <Compile Include="app\home\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\plant.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\models\user.py" />
+    <Compile Include="app\models\__init__.py" />
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="extensions.py" />
+    <Compile Include="run.py" />
+    <Compile Include="settings.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\errors\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\home\" />
+    <Folder Include="app\auth\" />
+    <Folder Include="app\dashboard\" />
+    <Folder Include="app\static\css\" />
+    <Folder Include="app\static\img\" />
+    <Folder Include="app\static\js\" />
+    <Folder Include="app\static\libs\" />
+    <Folder Include="app\static\libs\flaticons\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\templates\errors\" />
+    <Folder Include="app\templates\home\" />
+    <Folder Include="app\templates\dashboard\" />
+    <Folder Include="app\templates\auth\" />
+    <Folder Include="data\" />
+    <Folder Include="tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\static\css\login.css" />
+    <Content Include="app\templates\auth\login.html" />
+    <Content Include="app\static\css\animate.min.css" />
+    <Content Include="app\static\css\checkbox3.min.css" />
+    <Content Include="app\static\css\flat-admin-green.css" />
+    <Content Include="app\static\css\flat_admin_style.css" />
+    <Content Include="app\static\css\grayscale.css" />
+    <Content Include="app\static\css\sb-admin-2.css" />
+    <Content Include="app\static\css\select2.min.css" />
+    <Content Include="app\static\favicon.ico" />
+    <Content Include="app\static\img\bg_login.jpg" />
+    <Content Include="app\static\img\landing2.jpg" />
+    <Content Include="app\static\img\landing2BIG.jpg" />
+    <Content Include="app\static\img\logo.svg" />
+    <Content Include="app\static\img\logo_white.svg" />
+    <Content Include="app\static\img\plantHAT_avatar.jpg" />
+    <Content Include="app\static\js\app.js" />
+    <Content Include="app\static\js\grayscale.js" />
+    <Content Include="app\static\js\sb-admin-2.js" />
+    <Content Include="app\static\js\select2.full.min.js" />
+    <Content Include="app\static\libs\flaticons\flaticon.css" />
+    <Content Include="app\static\libs\flaticons\flaticon.eot" />
+    <Content Include="app\static\libs\flaticons\flaticon.html" />
+    <Content Include="app\static\libs\flaticons\flaticon.svg" />
+    <Content Include="app\static\libs\flaticons\flaticon.ttf" />
+    <Content Include="app\static\libs\flaticons\flaticon.woff" />
+    <Content Include="app\static\libs\flaticons\license.pdf" />
+    <Content Include="app\templates\auth\register.html" />
+    <Content Include="app\templates\dashboard\daily.html" />
+    <Content Include="app\templates\dashboard\index.html" />
+    <Content Include="app\templates\dashboard\monthly.html" />
+    <Content Include="app\templates\dashboard\strategies.html" />
+    <Content Include="app\templates\dashboard\yearly.html" />
+    <Content Include="app\templates\dashboard_base.html" />
+    <Content Include="app\templates\errors\404.html" />
+    <Content Include="app\templates\errors\500.html" />
+    <Content Include="app\templates\footer.html" />
+    <Content Include="app\templates\home\index.html" />
+    <Content Include="app\templates\layout.html" />
+    <Content Include="app\templates\nav.html" />
+    <Content Include="data\dev.db" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block page_title %}PlantHAT{% endblock %}
+{% block meta_description %} Plantbox - A RaspberryPi based, Flask powered plant growth controller and monitor{% endblock %}
+{% block content %}
+
+      <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+        <!-- Intro Header -->
+         <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="{{ url_for('static', filename='img/logo_white.svg') }}" class="logo">
+                        <p class="intro-text">The modular greenhouse system with real-time data of your plants.</p>
+                    </div>
+                </div>
+                <!--<span class="plant"></span>-->
+                <div class="row" align="right">
+                    <a href="{{ url_for('auth.login') }}" >
+						<button class="btn btn-default btn-lg">Login</button>
+					</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About PlantHAT</h2>
+                <p>I started this personal project to monitor the growth of my tomatoes and other vegetables and I also wanted to automate the watering based on simple strategies.</p>
+                <p>Just mount the board on top of a Raspberry Pi (or connect your own boards to the GPIOs), 
+                connect it to the local Internet/WLAN and use your tablet, phone or PC to check in on your plants.
+                It automatically controls multiple pumps and valves based on strategies that you can set to either optimize your vegetable yield or to take care of precious plants while you are gone.</p>
+                <p>Click the "Login" button, create a local account through the "Register" link and start controlling your plants growth!</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
