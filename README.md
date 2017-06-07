@@ -1,4 +1,4 @@
-<meta name='keywords' content='pi, raspberry pi, plant, plants, watering, automated greenhouse, pi watering plants'>
+<meta name='keywords' content='plantHAT, HAT, raspberry pi HAT, pi, IoT, app, python, raspberry pi, plant, plants, watering, automated greenhouse, pi watering plants'>
 
 # PlantHAT
 ![PlantHAT](https://raw.githubusercontent.com/mrgnomes/readme_images/master/plantHAT_Readme.png)
