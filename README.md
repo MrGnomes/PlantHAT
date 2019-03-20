@@ -1,7 +1,6 @@
 <meta name='keywords' content='plantHAT, HAT, raspberry pi HAT, pi, IoT, app, python, raspberry pi, plant, plants, watering, automated greenhouse, pi watering plants'>
 
 # PlantHAT
-![PlantHAT](https://raw.githubusercontent.com/mrgnomes/readme_images/master/plantHAT_Readme.png)
 
 Python library and design files for a modular plant monitoring and watering system based on the Raspberry Pi.
 
